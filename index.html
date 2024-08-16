@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Sharing Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Code Sharing Platform</h1>
+        <p class="lead text-center">Securely share and edit code with secret codes!</p>
+
+        <div class="d-flex justify-content-center mb-4">
+            <button id="newButton" class="btn btn-primary me-3">New</button>
+            <button id="openButton" class="btn btn-secondary">Open</button>
+        </div>
+
+        <div id="codeSection" class="card p-4 shadow-lg hidden mt-4">
+            <textarea id="codeTextArea" class="form-control code-textarea mb-3" placeholder="Your code goes here..."></textarea>
+            <div class="btn-group-custom">
+                <button id="pasteButton" class="btn btn-info btn-custom hidden">Paste</button>
+                <button id="clearButton" class="btn btn-secondary btn-custom hidden">Clear</button>
+                <button id="saveButton" class="btn btn-success btn-custom hidden">Save</button>
+                <button id="copyButton" class="btn btn-info btn-custom hidden">Copy</button>
+                <button id="editButton" class="btn btn-warning btn-custom hidden">Edit</button>
+                <button id="exitButton" class="btn btn-danger btn-custom">Exit</button>
+            </div>
+        </div>
+
+        <!-- Modal for entering the secret code -->
+        <div class="modal fade" id="codeModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="modalTitle" class="modal-title">Enter Secret Code</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" id="secretCodeInput" class="form-control" placeholder="Enter secret code" maxlength="10">
+                        <p id="codeWarning" class="text-danger mt-2"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="submitCodeButton" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

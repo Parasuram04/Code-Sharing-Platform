@@ -1,0 +1,47 @@
+.modal-content {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.code-textarea {
+    height: 300px;
+    resize: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.btn-group-custom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-custom {
+    margin-left: 8px;
+}
+
+/* Responsive button size adjustments */
+@media (max-width: 768px) {
+    .btn-custom {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .code-textarea {
+        height: 250px;
+    }
+}
+
+@media (min-width: 769px) {
+    .btn-custom {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .code-textarea {
+        height: 300px;
+    }
+}
